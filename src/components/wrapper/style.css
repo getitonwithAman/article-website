@@ -1,62 +1,130 @@
+/* style.css */
+
 .wrapper {
-  text-align: center;
-  background-color: white;
   padding: 50px 0;
 }
 
-.wrapper .row {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.wrapper .feature {
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.wrapper .feature:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.wrapper .icon {
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-size: 30px;
-  background-color: #f3f5f9;
-  margin: 0 auto 20px;
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-}
-
-.wrapper .icon:hover {
-  transform: scale(1.1);
-  background-color: #e0e5ec;
-}
-
-.wrapper .feature h3 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 10px;
+.background {
+  background-color: #f5f5f5;
   color: #333;
 }
 
-.wrapper .feature p {
-  font-size: 16px;
-  color: #666;
+.trending-heading {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+  color: #0f3460; /* Heading color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Text shadow for depth */
 }
 
-.wrapper .feature:hover h3 {
-  color: #ff9900;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.wrapper .feature:hover p {
-  color: #444;
+.features-container {
+  display: flex; /* Display items in a flex container */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center; /* Center items horizontally */
+  gap: 30px; /* Space between items */
+  overflow: hidden; /* Hide overflow to prevent horizontal scroll */
+  position: relative; /* Ensure relative positioning for children */
+}
+
+.feature {
+  flex: 1 1 250px; /* Flex properties for responsive sizing */
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
+  cursor: pointer;
+  animation: floatAnimation 20s linear infinite, fadeInUp 1s ease-in-out; /* Looping animation and fade-in */
+  position: relative;
+  overflow: hidden; /* Hide overflow to prevent clipping of scaled elements */
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(-100%); /* Move halfway across the screen */
+  }
+  51% {
+    transform: translateX(200%); /* Instantly move to double the screen width to seamlessly loop */
+  }
+  100% {
+    transform: translateX(-100%); /* Return to start position */
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature:hover {
+  transform: translateY(-5px) scale(1.05); /* Elevate and slightly scale up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  background-color: #ffd966; /* Light orange background color on hover */
+}
+
+.feature:hover h3 {
+  transform: scale(1.2); /* Scale up h3 on hover */
+  color: #0f3460; /* Change text color on hover */
+}
+
+.feature:hover p {
+  transform: translateX(10px); /* Slightly translate p on hover */
+}
+
+.feature:hover::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  opacity: 0;
+  animation: hoverGlow 0.3s forwards;
+}
+
+@keyframes hoverGlow {
+  to {
+    opacity: 1;
+  }
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, color 0.3s ease; /* Added transition */
+}
+
+.feature p {
+  font-size: 1rem;
+  line-height: 1.4;
+  transition: transform 0.3s ease; /* Added transition */
+}
+
+@media (max-width: 768px) {
+  .feature {
+    flex-basis: calc(50% - 30px); /* Adjust for two columns on smaller screens */
+  }
 }

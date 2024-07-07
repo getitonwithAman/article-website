@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Signup.css';
+import { Link } from 'react-router-dom';
 
 function Signup({ onClose }) {
   const [email, setEmail] = useState('');
@@ -36,6 +37,13 @@ function Signup({ onClose }) {
           placeholder="Password"
           required
         />
+        <div className="forgot-password">
+          <div className="to-right">
+          <p>Already a user?</p>
+          <Link to={"/login"}>Login</Link>
+          </div>
+          <Link to={"/login"}>Privacy policy...</Link>
+        </div>
         <button type="submit">Signup</button>
       </form>
       <div className="signup-options">

@@ -1,30 +1,31 @@
 .homeSlide .box {
-    margin-top: 80px;
-    padding: 0 40px 60px;
+    margin-top: 10px; /* Adjusted margin-top */
+    margin-bottom: 10px; /* Adjusted margin-bottom */
+    padding: 10px 40px 30px; /* Adjusted padding */
 }
 
 .homeSlide h1 {
     font-size: 45px;
     line-height: 55px;
-    margin: 50px 0 20px 0;
+    margin: 20px 0 10px; /* Adjusted margin */
     color: rgb(10, 139, 194);
     font-family: cursive;
     font-weight: 700;
 }
 
 .homeSlide p {
-    margin: 20px 0;
+    margin: 10px 0; /* Adjusted margin */
 }
 
 .homeSlide ul {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px; /* Adjusted bottom position */
 }
 
 .homeSlide ul li {
     border: 2px solid #b8b7b7;
     border-radius: 50%;
-    padding: 10px;
+    padding: 6px; /* Adjusted padding */
 }
 
 .homeSlide ul li button {
@@ -43,11 +44,11 @@
 
 .homeSlide .box img {
     width: 100%;
-    max-height: 300px;
+    max-height: 280px; /* Adjusted max-height */
     object-fit: contain;
 }
 
-.btn-primary{
+.btn-primary {
     padding: 1rem;
     border-radius: 1rem;
 }

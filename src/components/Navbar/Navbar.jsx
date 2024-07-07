@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
-import "./Navbar.css";
+import React, { useState, useEffect } from "react";
+import { Container, Nav, Navbar, Form, FormControl, Button } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
+import "./Navbar.css";
 
-const NavBar = () => {
-  const loginStatus = false; // useSelector to get login status from Redux store if needed
+const NavBar = ({ loginStatus }) => {
   const [expand, setExpand] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
   const location = useLocation();
+  const [searchQuery, setSearchQuery] = useState(""); // State for search query
 
   useEffect(() => {
     function scrollHandler() {
@@ -23,45 +23,43 @@ const NavBar = () => {
     };
   }, []);
 
+  const handleSearch = (e) => {
+    e.preventDefault();
+    // Implement search logic here, e.g., navigate to search results page or filter articles
+    console.log("Search Query:", searchQuery);
+    // Example: Navigate to search results page
+    // history.push(`/search-results?query=${encodeURIComponent(searchQuery)}`);
+    setSearchQuery(""); // Clear search input after submission
+  };
+
   return (
-    <Navbar
-      fixed="top"
-      expand="md"
-      className={isFixed ? "navbar fixed" : "navbar"}
-    >
+    <Navbar fixed="top" expand="md" className={isFixed ? "navbar fixed" : "navbar"}>
       <Container className="navbar-container">
-        <Navbar.Brand to="/">
+        <Navbar.Brand as={Link} to="/">
           <h1 className="logo">Jade</h1>
         </Navbar.Brand>
 
-        <div className="d-flex">
-          <div className="media-cart">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="black"
-              className="nav-icon"
-            >
-              <path
-                fillRule="evenodd"
-                d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
-                clipRule="evenodd"
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          onClick={() => setExpand(!expand)}
+        />
+
+        <Navbar.Collapse id="basic-navbar-nav" className={`${expand ? "show" : ""}`}>
+          <Nav className="ms-auto">
+            <Form onSubmit={handleSearch} className="d-flex align-items-center">
+              <FormControl
+                type="search"
+                placeholder="Search"
+                className="mr-2"
+                aria-label="Search"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
               />
-            </svg>
-          </div>
-          <Navbar.Toggle
-            aria-controls="basic-navbar-nav"
-            onClick={() => {
-              setExpand(expand ? false : "expanded");
-            }}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </Navbar.Toggle>
-        </div>
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="justify-content-end flex-grow-1 pe-3">
+              <Button class="my-search" variant="outline-success" type="submit">
+                Search
+              </Button>
+            </Form>
+
             <Nav.Item>
               <Link
                 aria-label="Go to Home Page"
@@ -69,7 +67,7 @@ const NavBar = () => {
                 to="/"
                 onClick={() => setExpand(false)}
               >
-                <span className="nav-link-label">Home</span>
+                Home
               </Link>
             </Nav.Item>
 
@@ -80,7 +78,7 @@ const NavBar = () => {
                 to="/top-articles"
                 onClick={() => setExpand(false)}
               >
-                <span className="nav-link-label">Top Articles</span>
+                Top Articles
               </Link>
             </Nav.Item>
 
@@ -91,7 +89,7 @@ const NavBar = () => {
                 to="/categories"
                 onClick={() => setExpand(false)}
               >
-                <span className="nav-link-label">Categories</span>
+                Categories
               </Link>
             </Nav.Item>
 
@@ -103,7 +101,7 @@ const NavBar = () => {
                   to="/account"
                   onClick={() => setExpand(false)}
                 >
-                  <span className="nav-link-label">Account</span>
+                  Account
                 </Link>
               </Nav.Item>
             ) : (
@@ -114,7 +112,7 @@ const NavBar = () => {
                   to="/login"
                   onClick={() => setExpand(false)}
                 >
-                  <span className="nav-link-label">Login/Signup</span>
+                  Login/Signup
                 </Link>
               </Nav.Item>
             )}
