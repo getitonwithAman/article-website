@@ -1,0 +1,126 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin: 8rem 0;
+}
+
+.login-container h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 550px;
+}
+
+.login-container label {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight:bolder;
+  color: #000; /* Black color for labels */
+  font-size: larger;
+}
+
+.login-container input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container input:active{
+  font-size: 1.5rem;
+}
+
+.login-container button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #555;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #555;
+}
+
+.to-right{
+  display: flex;
+  align-items: center;
+}
+
+.to-right> p {
+  padding-top: 13px;
+  margin-right: 5px;
+}
+
+.forgot-password {
+  display: flex;
+  justify-content: space-between;
+  /* text-align: right; */
+  align-items: center;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.forgot-password span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.forgot-password-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.forgot-password-modal p {
+  margin-bottom: 1rem;
+}
+
+.forgot-password-modal button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.forgot-password-modal button:hover {
+  background-color: #555;
+}

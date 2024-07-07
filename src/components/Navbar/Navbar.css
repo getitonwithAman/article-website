@@ -1,0 +1,62 @@
+/* General Styles */
+body {
+  padding-top: 70px; /* Adjust based on the actual height of the navbar */
+}
+
+.navbar {
+  background-color: rgba(255, 239, 213, 0.9); /* Very light orange background */
+  padding: 10px 20px;
+  transition: background-color 0.3s ease-in-out;
+  z-index: 10; /* Ensure the navbar stays on top */
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff8c00; /* Light orange color */
+  animation: bounce 2s infinite;
+}
+
+.navbar-link {
+  color: black;
+  font-size: 16px;
+  margin: 0 10px;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.navbar-link.active,
+.navbar-link:hover {
+  color: #ff8c00; /* Light orange color */
+}
+
+.nav-link-label {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-link.active .nav-link-label {
+  background-color: #ff8c00; /* Light orange background */
+  color: white;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}

@@ -1,0 +1,56 @@
+/* style.css */
+
+.article-footer {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Light text color */
+  padding: 50px 0;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.box {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft box shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ff8c00; /* Light orange color */
+}
+
+.box h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.box ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  opacity: 1; /* Ensure list items are visible by default */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.box ul li:hover {
+  color: #ff8c00; /* Light orange color on hover */
+}

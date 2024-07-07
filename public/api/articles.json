@@ -1,0 +1,4 @@
+[
+  { "id": 1, "title": "First Article", "summary": "Summary of the first article", "content": "Content of the first article" },
+  { "id": 2, "title": "Second Article", "summary": "Summary of the second article", "content": "Content of the second article" }
+]
