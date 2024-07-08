@@ -33,24 +33,30 @@ body {
   margin: 0 12.6px; /* Reduced margin for better spacing */
   text-decoration: none;
   position: relative;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.3s, box-shadow 0.3s, background-color 0.3s, padding 0.3s;
 }
 
 .navbar-link.active,
 .navbar-link:hover {
   color: #ff8c00; /* Light orange color */
+  transform: scale(1.1);
+  box-shadow: 0 2px 10px rgba(255, 140, 0, 0.5);
+  background-color: rgba(255, 140, 0, 0.1); /* Light orange background on hover */
+  padding: 10px; /* Increased padding for hover effect */
 }
 
 .nav-link-label {
   display: inline-block;
   padding: 9px 18px; /* Reduced padding for better click area */
   border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .navbar-link.active .nav-link-label {
   background-color: #ff8c00; /* Light orange background */
   color: white;
+  transform: scale(1.1);
+  box-shadow: 0 2px 10px rgba(255, 140, 0, 0.5);
 }
 
 .logo-container {
@@ -78,6 +84,12 @@ body {
 .form-control {
   margin-right: 9px; /* Reduced margin for better spacing */
   border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+  border-color: #ff8c00; /* Light orange border on focus */
+  box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
 }
 
 .btn-search {
@@ -85,11 +97,14 @@ body {
   background-color: #ff8c00; /* Orangish shade */
   border: none;
   color: white;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s, letter-spacing 0.3s;
 }
 
 .btn-search:hover {
   background-color: #e67800; /* Darker shade on hover */
+  transform: scale(1.1);
+  box-shadow: 0 2px 10px rgba(255, 140, 0, 0.5);
+  letter-spacing: 1px; /* Add letter spacing on hover */
 }
 
 .btn-search:focus {
@@ -98,9 +113,39 @@ body {
 }
 
 /* Special Highlight for Login/Signup Button */
+.navbar-link.login-signup {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #ff8c00; /* Light orange color */
+  border: 2px solid transparent;
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s, letter-spacing 0.3s;
+}
+
 .navbar-link.login-signup:hover {
   background-color: #ff8c00; /* Light orange background on hover */
   color: white;
+  border-color: #ff8c00; /* Light orange border on hover */
+  transform: scale(1.1);
+  box-shadow: 0 2px 10px rgba(255, 140, 0, 0.5);
+  letter-spacing: 1px; /* Add letter spacing on hover */
+}
+
+.navbar-link.login-signup::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #ff8c00; /* Light orange color */
+  z-index: -1;
+  transition: width 0.3s ease-out;
+  border-radius: 5px;
+}
+
+.navbar-link.login-signup:hover::before {
+  width: 100%;
 }
 
 @media (max-width: 768px) {
