@@ -1,4 +1,5 @@
-import { lazy, Suspense } from "react";
+// src/App.jsx
+import React, { lazy, Suspense } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/Navbar/Navbar";
@@ -13,6 +14,11 @@ const TopArticles = lazy(() => import("./pages/TopArticles"));
 const Categories = lazy(() => import("./pages/Categories"));
 const Login = lazy(() => import("./pages/LoginPage"));
 const Signup = lazy(() => import("./pages/SignupPage"));
+const ContactUsPage = lazy(() => import("./pages/ContactUsPage"));
+const AboutUsPage = lazy(() => import("./pages/AboutUsPage"));
+const TermsOfServicePage = lazy(() => import("./pages/TermsOfServicePage"));
+const PrivacyPolicyPage = lazy(() => import("./pages/PrivacyPolicyPage"));
+const AdvertisingPage = lazy(() => import("./pages/AdvertisingPage"));
 
 function App() {
   return (
@@ -36,6 +42,11 @@ function App() {
           <Route path="/categories" element={<Categories />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/contact-us" element={<ContactUsPage />} />
+          <Route path="/about-us" element={<AboutUsPage />} />
+          <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/advertising" element={<AdvertisingPage />} />
         </Routes>
         <Footer />
       </Router>
