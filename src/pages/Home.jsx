@@ -6,9 +6,6 @@ import SliderHome from "../components/Slider";
 import useWindowScrollToTop from "../hooks/useWindowScrollToTop";
 
 const Home = () => {
-  const newArrivalData = products.filter(
-    (item) => item.category === "indian" || item.category === "shackets"
-  );
   const bestSales = products.filter((item) => item.category === "indian");
   useWindowScrollToTop();
   return (
@@ -16,9 +13,8 @@ const Home = () => {
       <h1>Trending Topics</h1>
       <SliderHome />
       <Wrapper />
-      <Section title="Big Discount" bgColor="#f6f9fc" productItems={discoutProducts}/>
-      <Section title="New Arrivals" bgColor="white" productItems={newArrivalData}/>
-      <Section title="Best Sales" bgColor="#f6f9fc" productItems={bestSales} />
+      <Section title="Latest Articles" bgColor="#f6f9fc" productItems={discoutProducts}/>
+      <Section title="Editor's Picks" bgColor="#f6f9fc" productItems={bestSales} />
     </Fragment>
   );
 };

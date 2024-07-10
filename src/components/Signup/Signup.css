@@ -1,68 +1,128 @@
+/* src/components/Signup/Signup.css */
+
 .signup-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 400px;
+  margin: 2rem auto; /* Added space at the top and bottom */
   padding: 2rem;
-  margin: 8rem 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-.signup-container h1 {
+.signup-container:hover {
+  transform: scale(1.01); /* Slight scaling on hover */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2c2c2c; /* Darker text color */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+form .form-group {
   margin-bottom: 1rem;
-  font-size: 2.5rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.signup-container form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #2c2c2c; /* Darker text color */
+}
+
+form input {
   width: 100%;
-  max-width: 550px;
-}
-
-.signup-container label {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: bolder;
-  color: #000;
-  font-size: larger;
-}
-
-.signup-container input {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
   border-radius: 5px;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.signup-container input:active {
-  font-size: 1.5rem;
+form input:focus {
+  border-color: #ff8c00;
+  box-shadow: 0 0 5px rgba(255, 140, 0, 0.3);
+  outline: none;
 }
 
-.signup-container button {
-  padding: 0.5rem 1rem;
+form input:invalid {
+  border-color: #e74c3c; /* Red border for invalid fields */
+}
+
+form input:valid {
+  border-color: #2ecc71; /* Green border for valid fields */
+}
+
+.forgot-password {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.forgot-password span,
+.forgot-password .to-right p {
+  cursor: pointer;
+  color: #ff8c00;
+  transition: color 0.3s ease-in-out;
+}
+
+.forgot-password span:hover,
+.forgot-password .to-right p:hover {
+  color: #e67800; /* Darker orange on hover */
+}
+
+.forgot-password .to-right p,
+.forgot-password .to-right a {
+  margin: 0;
+}
+
+.forgot-password .to-right a {
+  color: #ff8c00;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.forgot-password .to-right a:hover {
+  color: #e67800; /* Darker orange on hover */
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #ff8c00;
   border: none;
-  background-color: #333;
-  color: white;
+  color: #fff;
+  font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 1rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.signup-container button:hover {
-  background-color: #555;
+button:hover {
+  background-color: #e67800;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+button:disabled {
+  background-color: #ccc; /* Disabled button color */
+  cursor: not-allowed;
 }
 
 .signup-options {
-  margin-top: 1rem;
   text-align: center;
-  color: #000;
-  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+.signup-options p {
+  margin-bottom: 1rem;
+  color: #2c2c2c; /* Darker text color */
 }
 
 .social-signup {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .social-signup button {
@@ -70,24 +130,36 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.social-signup button.google {
+.social-signup .google {
   background-color: #db4437;
-  color: white;
+  color: #fff;
 }
 
-.social-signup button.facebook {
+.social-signup .facebook {
   background-color: #3b5998;
-  color: white;
+  color: #fff;
 }
 
-.social-signup button.linkedin {
-  background-color: #0e76a8;
-  color: white;
+.social-signup .linkedin {
+  background-color: #0077b5;
+  color: #fff;
 }
 
 .social-signup button:hover {
-  opacity: 0.9;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.social-signup .google:hover {
+  background-color: #c23321;
+}
+
+.social-signup .facebook:hover {
+  background-color: #2d4373;
+}
+
+.social-signup .linkedin:hover {
+  background-color: #005582;
 }

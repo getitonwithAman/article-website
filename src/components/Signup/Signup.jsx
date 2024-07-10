@@ -42,7 +42,6 @@ function Signup({ onClose }) {
           <p>Already a user?</p>
           <Link to={"/login"}>Login</Link>
           </div>
-          <Link to={"/login"}>Privacy policy...</Link>
         </div>
         <button type="submit">Signup</button>
       </form>

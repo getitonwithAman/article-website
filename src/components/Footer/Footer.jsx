@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; 
 import "./style.css";
 import { Col, Container, Row } from "react-bootstrap";
 
@@ -29,18 +30,18 @@ const Footer = () => {
           <Col md={3} sm={6} className="box">
             <h2>Useful Links</h2>
             <ul>
-              <li>About Us</li>
-              <li>Contact Us</li>
-              <li>Terms of Service</li>
-              <li>Privacy Policy</li>
-              <li>Advertising</li>
+              <li><Link to="/about-us">About Us</Link></li> 
+              <li><Link to="/contact-us">Contact Us</Link></li> 
+              <li><Link to="/terms-of-service">Terms of Service</Link></li> 
+              <li><Link to="/privacy-policy">Privacy Policy</Link></li> 
+              <li><Link to ="advertising">Advertising</Link></li>
             </ul>
           </Col>
           <Col md={3} sm={6} className="box">
             <h2>Contact Information</h2>
             <ul>
               <li>123 Jade, Cityville</li>
-              <li>Email: info@articlehub.com</li>
+              <li>Email: info@Jade.com</li>
               <li>Phone: +123 456 7890</li>
             </ul>
           </Col>
