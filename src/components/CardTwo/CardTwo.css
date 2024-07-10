@@ -1,0 +1,145 @@
+.trending-heading {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+    color: #0f3460; /* Heading color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Text shadow for depth */
+  }
+  
+  .card-two {
+    width: 45%; /* Increased width */
+    min-width: 750px; /* Increased minimum width */
+    height: 300px; /* Increased height */
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background: linear-gradient(145deg, #FFCC80, #FFAB91); /* Lighter shades of orange */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden; /* Ensure text does not overflow */
+  }
+  
+  .card-two:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-two:hover .heading {
+    color: #FFB74D; /* Lighter shade of orange */
+  }
+  
+  .card-two .image {
+    width: 45%;
+    height: 100%;
+    border-radius: 0.5rem 0 0 0.5rem;
+    cursor: pointer;
+  }
+  
+  .card-two .data {
+    width: 55%;
+    height: 100%;
+    padding: 1rem;
+    background: linear-gradient(145deg, #FFE0B2, #FFCCBC); /* Lighter shades of orange */
+    border-radius: 0 0.5rem 0.5rem 0;
+    color: #0f3460; /* Dark text color for better readability */
+    overflow: hidden; /* Ensure text does not overflow */
+  }
+  
+  .category {
+    color: #D84315; /* Darker shade of orange */
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Ensure text does not overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+    background: rgba(255, 87, 34, 0.1); /* Light background color for category */
+    padding: 0.2rem 0.5rem; /* Padding for better spacing */
+    border-radius: 0.25rem; /* Rounded corners for background */
+  }
+  
+  .heading {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #0f3460;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Ensure text does not overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+    background: rgba(255, 112, 67, 0.1); /* Light background color for heading */
+    padding: 0.2rem 0.5rem; /* Padding for better spacing */
+    border-radius: 0.25rem; /* Rounded corners for background */
+  }
+  
+  .description {
+    padding: 10px 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #0f3460; /* Dark text color for better readability */
+    overflow: hidden; /* Ensure text does not overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+    display: -webkit-box; /* Ensure multiline ellipsis */
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    -webkit-box-orient: vertical; /* Ensure multiline ellipsis */
+    background: rgba(255, 204, 128, 0.1); /* Light background color for description */
+    padding: 0.2rem 0.5rem; /* Padding for better spacing */
+    border-radius: 0.25rem; /* Rounded corners for background */
+  }
+  
+  .image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+  
+  .options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #0f3460; /* Dark text color for better readability */
+    margin-top: 1rem;
+    background: rgba(255, 183, 77, 0.1); /* Light background color for options */
+    padding: 0.2rem 0.5rem; /* Padding for better spacing */
+    border-radius: 0.25rem; /* Rounded corners for background */
+  }
+  
+  .options button {
+    background: #FF7043; /* Darker shade of orange */
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: #FFF;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .options button:hover {
+    background: #FF8A65; /* Lighter shade of orange */
+    transform: translateY(-2px);
+  }
+  
+  .options .share-button {
+    background: #FFA726; /* Medium shade of orange */
+  }
+  
+  .options .share-button:hover {
+    background: #FFB74D; /* Lighter shade of orange */
+  }
+  
+  .options .read-more {
+    color: #FFB300; /* Bright yellow-orange */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .options .read-more:hover {
+    color: #FFCC80; /* Lighter yellow-orange */
+  }
+  
