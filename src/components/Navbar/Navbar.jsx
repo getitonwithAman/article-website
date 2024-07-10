@@ -86,7 +86,7 @@ const NavBar = ({ loginStatus }) => {
               <Link
                 aria-label="Go to Categories Page"
                 className={`navbar-link ${location.pathname === "/categories" ? "active" : ""}`}
-                to="/categories"
+                to="/categoriesPage"
                 onClick={() => setExpand(false)}
               >
                 Categories

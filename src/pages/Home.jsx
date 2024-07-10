@@ -10,6 +10,7 @@ const Home = () => {
   useWindowScrollToTop();
   return (
     <Fragment>
+      <h1>Trending Topics</h1>
       <SliderHome />
       <Wrapper />
       <Section title="Latest Articles" bgColor="#f6f9fc" productItems={discoutProducts}/>

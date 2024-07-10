@@ -42,7 +42,7 @@ const Wrapper = () => {
                   animationDelay: `${index * 0.1}s` // Delay animation for each item
                 }}
               >
-                <div className="icon">{val.icon}</div>
+                <div className="icon animation">{val.icon}</div>
                 <h3>{val.title}</h3>
                 <p>{val.subtitle}</p>
               </Col>

@@ -32,33 +32,66 @@ import shackets04 from "../Images/shirt-16.jpg";
 
 import classicSlide from "../Images/football-shirt.png";
 import knittedSlide from "../Images/clothes.png";
+import tokyo from "../Images/tokyo.jpg";
+import gaming from "../Images/gaming.jpg";
+import health from "../Images/healthyfood.jpg";
+import ArtificialIntelligence from "../Images/artificial intelligence.jpg";
+
+
+// export const SliderData = [
+//   {
+//       id: 1,
+//       title: "IPL Special custom",
+//       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
+//       cover: classicSlide,
+//   },
+//   {
+//       id: 2,
+//       title: "Art printed Special",
+//       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
+//       cover: phone08,
+//   },
+//   {
+//       id: 3,
+//       title: "Daily wear Fashion",
+//       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
+//       cover: shackets01,
+//   },
+//   {
+//       id: 4,
+//       title: "Professional",
+//       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
+//       cover: knittedSlide,
+//   },
+// ];
 
 export const SliderData = [
   {
-      id: 1,
-      title: "IPL Special custom",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
-      cover: classicSlide,
+    id: 1,
+    title: "Exploring the Hidden Gems of Tokyo",
+    desc: "Tokyo is a city that never ceases to amaze. From its bustling streets to its serene gardens, there's something for everyone. In this article, we'll explore some of the hidden gems that make Tokyo a must-visit destination.",
+    cover: tokyo,
   },
   {
-      id: 2,
-      title: "Art printed Special",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
-      cover: phone08,
+    id: 2,
+    title: "The Ultimate Guide to Building a Gaming PC",
+    desc: "Building a gaming PC can be a daunting task, but with the right guidance, anyone can do it. This comprehensive guide covers everything from selecting the right components to assembling them correctly.",
+    cover: gaming,
   },
   {
-      id: 3,
-      title: "Daily wear Fashion",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
-      cover: shackets01,
+    id: 3,
+    title: "Healthy Eating: Tips and Tricks for a Balanced Diet",
+    desc: "Eating healthy doesn't have to be difficult. In this article, we provide practical tips and tricks to help you maintain a balanced diet and improve your overall well-being.",
+    cover: health,
   },
   {
-      id: 4,
-      title: "Professional",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis consequat eu, quam etiam at quis ut convallis.",
-      cover: knittedSlide,
+    id: 4,
+    title: "The Future of Artificial Intelligence",
+    desc: "Artificial Intelligence (AI) is rapidly advancing and transforming various industries. This article delves into the latest developments in AI and what we can expect in the future.",
+    cover: ArtificialIntelligence,
   },
 ];
+
 
 export const serviceData = [
   {
