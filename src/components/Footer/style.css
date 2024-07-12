@@ -49,8 +49,11 @@
   font-size: 16px;
   opacity: 1; /* Ensure list items are visible by default */
   transition: color 0.3s ease; /* Smooth color transition */
+  cursor: pointer; /* Pointer cursor for clickable items */
+  text-decoration: none; /* Remove underline */
 }
 
-.box ul li:hover {
-  color: #ff8c00; /* Light orange color on hover */
+.box ul li:hover,
+.box ul li:focus {
+  color: #ff8c00; /* Light orange color on hover or focus */
 }

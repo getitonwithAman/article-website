@@ -1,0 +1,86 @@
+/* src/components/ContactUs/ContactUs.css */
+
+.contact-us-container {
+  max-width: 600px;
+  margin: 2rem auto; /* Added space at the top and bottom */
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-us-container:hover {
+  transform: scale(1.01); /* Slight scaling on hover */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2c2c2c; /* Darker text color */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #2c2c2c; /* Darker text color */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff8c00;
+  box-shadow: 0 0 5px rgba(255, 140, 0, 0.3);
+  outline: none;
+}
+
+.contact-form input:invalid,
+.contact-form textarea:invalid {
+  border-color: #e74c3c; /* Red border for invalid fields */
+}
+
+.contact-form input:valid,
+.contact-form textarea:valid {
+  border-color: #2ecc71; /* Green border for valid fields */
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #ff8c00;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: #e67800;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.submit-button:disabled {
+  background-color: #ccc; /* Disabled button color */
+  cursor: not-allowed;
+}

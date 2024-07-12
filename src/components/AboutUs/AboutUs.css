@@ -1,0 +1,127 @@
+/* src/components/AboutUs/AboutUs.css */
+
+.about-us-container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b, #ffcc99); /* Enhanced vibrant gradient background */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  animation: slideInFromTop 0.8s ease-in-out;
+  color: #2c2c2c; /* Darker text color */
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-us-container:hover {
+  transform: scale(1.02); /* Slight scaling on hover */
+}
+
+.about-us-container h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #2c2c2c;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+  animation: pulse 1.5s infinite; /* Enhanced pulse animation to the header */
+}
+
+.about-us-container p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #4a4a4a; /* Darker text color */
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1.2s ease-in-out; /* Fade-in animation for paragraphs */
+}
+
+.about-us-section {
+  margin-bottom: 2rem;
+  animation: slideIn 1s ease-in-out;
+}
+
+.about-us-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2c2c2c;
+  background: linear-gradient(135deg, #feb47b, #ffcc99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  animation: bounceIn 1s ease-in-out;
+}
+
+.about-us-section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+.about-us-section li {
+  margin-bottom: 0.5rem;
+  color: #2c2c2c; /* Darker text color */
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+a {
+  color: #ff7e5f; /* Orangish link color */
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #ff4e50; /* Darker orange on hover */
+}
+
+/* Keyframes for animations */
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

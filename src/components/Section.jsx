@@ -1,5 +1,5 @@
 import { Container, Row } from "react-bootstrap";
-import ProductCard from "./ProductCard/ProductCard";
+import ProductCard from "./CardTwo/CardTwo";
 
 const Section = ({ title, bgColor, productItems }) => {
   return (
