@@ -13,7 +13,7 @@ const Home = () => {
   useWindowScrollToTop();
   return (
     <Fragment>
-      <h1>Trending Topics</h1>
+      {/* <h1 style={{textAlign:"center"}}>Trending Topics</h1> */}
       <SliderHome />
       <Wrapper />
       <Section title="Big Discount" bgColor="#f6f9fc" productItems={discoutProducts}/>
