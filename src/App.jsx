@@ -9,6 +9,9 @@ import Loader from "./components/Loader/Loader";
 import "react-toastify/dist/ReactToastify.css";
 import ArticalsForEachCatagory from "./pages/ArticalsForEachCatagory";
 import CategoriesPage from "./pages/categoriesPage";
+import ArticlePage from "./pages/ArticlePage";
+import { articles } from "./Articledata";
+import Userdashbord from "./pages/Userdashboard";
 
 // Lazy-loaded components
 const Home = lazy(() => import("./pages/Home"));
@@ -21,6 +24,8 @@ const AboutUsPage = lazy(() => import("./pages/AboutUsPage"));
 const TermsOfServicePage = lazy(() => import("./pages/TermsOfServicePage"));
 const PrivacyPolicyPage = lazy(() => import("./pages/PrivacyPolicyPage"));
 const AdvertisingPage = lazy(() => import("./pages/AdvertisingPage"));
+
+
 
 function App() {
     const generateCategoryRoutes = () => {
@@ -38,6 +43,8 @@ function App() {
         />
       ));
     };
+
+    // console.log(articles);
   return (
     <Suspense fallback={<Loader />}>
       <Router>
@@ -66,6 +73,10 @@ function App() {
           <Route path="/terms-of-service" element={<TermsOfServicePage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/advertising" element={<AdvertisingPage />} />
+          <Route path="/Userdashboard" element={<Userdashbord />} />
+          <Route path={`/${articles[0].title}`} element={<ArticlePage article={articles[0]}/>} /> 
+          
+          
         </Routes>
         <Footer />
       </Router>
