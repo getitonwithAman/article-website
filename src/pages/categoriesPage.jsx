@@ -1,6 +1,6 @@
 import React from 'react'
 import Categories from '../components/Categories/Categories'
-import {categories} from "../data";
+import {categories} from "../Categorydata";
 
 export default function CategoriesPage() {
   return (

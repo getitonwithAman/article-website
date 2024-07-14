@@ -1,11 +1,12 @@
 // TopArticles.jsx
 import React from 'react';
 import Articles from '../components/Articles/Articles';
+// import articles from '../data'
 
 const TopArticles = () => {
-  return (
+  return ( 
     <div>
-      <Articles/>
+      <Articles />
     </div>
   );
 }

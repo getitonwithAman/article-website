@@ -84,6 +84,17 @@ const NavBar = ({ loginStatus }) => {
 
             <Nav.Item>
               <Link
+                aria-label="Go to Top Articles Page"
+                className={`navbar-link ${location.pathname === "/User-Dashboard" ? "active" : ""}`}
+                to="/Userdashboard"
+                onClick={() => setExpand(false)}
+              >
+                Post
+              </Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Link
                 aria-label="Go to Categories Page"
                 className={`navbar-link ${location.pathname === "/categories" ? "active" : ""}`}
                 to="/categoriesPage"
